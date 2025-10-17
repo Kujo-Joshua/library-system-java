@@ -3,14 +3,14 @@ package src.service;
 import java.util.List;
 
 import src.model.Bibliotecario;
-import src.model.Estudiante;
+import src.model.Alumn;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class UsersService {
-    private List<Estudiante> alumnos=new ArrayList<>();
-    private HashMap<Integer, Estudiante> alumnosPorId=new HashMap<>();
+public class AlumnService {
+    private List<Alumn> alumnos=new ArrayList<>();
+    private HashMap<Integer, Alumn> alumnosPorId=new HashMap<>();
     //trie por implementar V 2.0?
 
     private List<Bibliotecario> bibliotecarios=new ArrayList<>();
@@ -18,13 +18,13 @@ public class UsersService {
     //trie por implementar
 
 
-    public void setAlumnos(List<Estudiante> alumnos) {
+    public void setAlumnos(List<Alumn> alumnos) {
         this.alumnos = alumnos;
     }
-    public List<Estudiante> getAlumnos() {
+    public List<Alumn> getAlumnos() {
         return alumnos;
     }
-    public void setAlumnosPorId(HashMap<Integer, Estudiante> alumnosPorId) {
+    public void setAlumnosPorId(HashMap<Integer, Alumn> alumnosPorId) {
         this.alumnosPorId = alumnosPorId;
     }
     public void setBibliotecarios(List<Bibliotecario> bibliotecarios) {
@@ -33,7 +33,7 @@ public class UsersService {
     public void setBibliotecariosPorId(HashMap<Integer, Bibliotecario> bibliotecariosPorId) {
         this.bibliotecariosPorId = bibliotecariosPorId;
     }
-    public HashMap<Integer, Estudiante> getAlumnosPorId() {
+    public HashMap<Integer, Alumn> getAlumnosPorId() {
         return alumnosPorId;
     }
     public List<Bibliotecario> getBibliotecarios() {

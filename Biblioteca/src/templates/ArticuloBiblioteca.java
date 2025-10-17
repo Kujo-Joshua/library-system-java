@@ -4,8 +4,19 @@ public abstract class ArticuloBiblioteca {
     private String titulo;
     private int id;
     private int anioPublicacion;
-    boolean disponible;
-
+    boolean disponible=true;
+    boolean descontinuado=false;
+    
+    public ArticuloBiblioteca(String titulo, int anioPublicacion){
+        this.titulo=titulo;
+        this.anioPublicacion=anioPublicacion;
+    }
+    public boolean getDescontinuado(){
+        return descontinuado;
+    }
+    public void setDescontinuado(boolean descontinuado) {
+        this.descontinuado = descontinuado;
+    }
     public int getAnioPublicacion() {
         return anioPublicacion;
     }

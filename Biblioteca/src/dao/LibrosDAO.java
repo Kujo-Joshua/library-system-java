@@ -2,14 +2,19 @@ package src.dao;
 
 
 import src.model.Libro;
-import src.templates.EntidadesConId;
+import src.templates.EntidadesConIdDAO;
 
-public class LibrosDAO extends EntidadesConId<Libro>{
+public class LibrosDAO extends EntidadesConIdDAO<Libro>{
     @Override
-    public void updateEntidad(Libro entidad, int id) {
-        // TODO Auto-generated method stub
-        super.updateEntidad(entidad, id);
-        entidad.setId(id);
+    public int getIdWithoutUsing() {
+        return entidadId.size()+1;
+    }
+    @Override
+    public void addEntidad(Libro entidad) {
+        entidadId.put(entidad.getId(), entidad);
+    }
+    public void updateEntidad(Libro entidad) {
+        entidadId.put(entidad.getId(), entidad);
     }
     @Override
     public void readEntidad(int id) {
@@ -18,7 +23,8 @@ public class LibrosDAO extends EntidadesConId<Libro>{
     }
     @Override
     public void deleteEntidad(int id) {
-        // TODO Auto-generated method stub
+        Libro desactive=getEntityForId(id);
+        desactive.setDescontinuado(true); 
         
     }
     

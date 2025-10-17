@@ -1,4 +1,4 @@
-package model;
+package src.templates;
 
 public abstract class Persona {
     private String nombre;
@@ -8,7 +8,7 @@ public abstract class Persona {
 
     public abstract String mostrarInfo();
     public abstract void registrar();
-    
+
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }

@@ -11,6 +11,7 @@ public class AltaAlumno extends OperationCrud<Alumn>{
     @Override
     protected void procesar(Alumn object) {
         // TODO Auto-generated method stub
+
         
     }
     @Override
